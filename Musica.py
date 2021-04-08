@@ -68,10 +68,8 @@ label.pack()
 
 listbox = Listbox(root, width=50, height=12)	
 listbox.pack()
-#listamusica.reverse()
 for musica in listamusica:
 	listbox.insert(0, musica)
-#listamusica.reverse()
 
 IniziaBTN = Button(root, text="▷", foreground = "orange", background = "purple", width=5, height=1)
 IniziaBTN.place(x=100, y=240)
@@ -90,7 +88,7 @@ RicominBTN.place(x=300, y=240)
 
 VolumeLiv = Scale(root, from_=0, to_=100, orient=VERTICAL, resolution=1, command=LivVolumeAudio)
 VolumeLiv.place(x=400, y=120)
-VolumeLiv.set(70)  # implement the default value of scale when music player starts
+VolumeLiv.set(70) 
 mixer.music.set_volume(0.7)
 
 IniziaBTN.bind("<Button-1>",Play)
